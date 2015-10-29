@@ -749,7 +749,6 @@ suite('recur_iterator', function() {
       suite('BYMONTH', function() {
         testRRULE('FREQ=WEEKLY;BYMONTH=12', {
           dates: [
-            //'2015-08-15T09:00:00', todo
             '2015-12-05T09:00:00',
             '2015-12-12T09:00:00',
           ]
@@ -1471,14 +1470,12 @@ suite('recur_iterator', function() {
         });
         testRRULE('FREQ=YEARLY;BYWEEKNO=1', {
           dates: [
-            //'2015-08-15T08:00:00', todo
             '2016-01-09T08:00:00',
             '2017-01-07T08:00:00',
           ]
         });
         testRRULE('FREQ=YEARLY;BYWEEKNO=5,10', {
           dates: [
-            //'2015-08-15T08:00:00', todo
             '2016-02-06T08:00:00',
             '2016-03-12T08:00:00',
           ]
@@ -1529,7 +1526,6 @@ suite('recur_iterator', function() {
         //yearly, byweekNo, bymonthday
         testRRULE('FREQ=YEARLY;BYMONTHDAY=4,5,6,7,8;BYWEEKNO=23', {
           dates: [
-            //'2015-06-08T08:00:00',todo
             '2016-06-06T08:00:00',
             '2016-06-07T08:00:00',
             '2016-06-08T08:00:00',
