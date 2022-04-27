@@ -4,16 +4,16 @@ import { terser } from 'rollup-plugin-terser';
 export default {
   input: 'lib/ical/module.js',
   output: [
-    { file: 'dist/ical.js',  format: 'es', exports: "default" },
+    { file: 'dist/ical.js',  format: 'es', exports: "named" },
     {
       file: 'dist/ical.min.js',
       format: 'es',
-      exports: "default",
+      exports: "named",
       plugins: [terser()]
     },
     {
       file: 'dist/ical.es5.js',
-      exports: "default",
+      exports: "named",
       format: 'cjs',
       plugins: [
         getBabelOutputPlugin({ presets: ['@babel/preset-env'] })
@@ -21,7 +21,7 @@ export default {
     },
     {
       file: 'dist/ical.es5.min.js',
-      exports: "default",
+      exports: "named",
       format: 'cjs',
       plugins: [
         getBabelOutputPlugin({ presets: ['@babel/preset-env'] }),
